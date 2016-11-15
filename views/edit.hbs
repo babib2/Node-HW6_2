@@ -1,0 +1,16 @@
+ <!DOCTYPE html>
+ <html lang="ru-RU">
+    <head>
+    </head>
+    <body>
+
+    	<h1> Обновить задачу</h1>
+    	<form action="" method="post">
+        {{#each task}}
+            <input type="text" name="text" placeholder="Задание" value="{{text}}">
+            <input type="text" name="completed" placeholder="false/true" value="{{completed}}">
+        {{/each}}
+            <button>Отправить</button>
+    	</form>
+    </body>
+</html>

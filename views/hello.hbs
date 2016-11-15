@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+ <html lang="ru-RU">
+    <head>
+    </head>
+    <body>
+
+    <h2> Список задач</h2> 
+    {{#each tasks}}
+        {{text}}  {{completed}}   <a href="/delete/{{id}}">Удалить</a> <a href="/edit/{{id}}">Редактировать</a> 
+        
+            <a href="/completed/{{id}}">Выполнено</a>
+        
+    
+        <br>
+        
+
+    {{/each}}
+    
+
+    	<h2> Добавить данные</h2>
+    	<form action="/add" method="post">
+    		<input type="text" name="text" placeholder="Отправить">
+            <button>Отправить</button>
+    	</form>
+    </body>
+</html>
